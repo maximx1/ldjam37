@@ -21,7 +21,3 @@ class ManualCharacterInputComponent:
             entity.y_direction = -1
         if keys_pressed[pygame.K_s]:
             entity.y_direction = 1
-
-        # Into it's own component
-        entity.x_loc = entity.x_loc + entity.x_direction
-        entity.y_loc = entity.y_loc + entity.y_direction
