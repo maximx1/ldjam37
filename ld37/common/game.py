@@ -10,15 +10,18 @@ class Ldjam:
 
     def setup(self):
         self.done = False
+        self.clock = pygame.time.Clock()
         return 0
 
     def play(self):
         while not self.done:
-            self.screen.fill(Colors.BLACK)
+            self.screen.fill(Colors.WHITE)
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     self.done = True
                 elif event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_ESCAPE:
                         self.done = True
+            pygame.display.flip()
+            self.clock.tick(60)
         pygame.quit()
