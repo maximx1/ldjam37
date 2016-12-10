@@ -24,7 +24,7 @@ class Ldjam:
 
     def play(self):
         while not self.pc.done:
-            game_time = self.clock.tick(60)
+            game_time = self.clock.tick(30)
             self.screen.fill(Colors.WHITE)
             self.pc.update(game_time)
             self.camera.update(self.pc)
