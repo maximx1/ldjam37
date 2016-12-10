@@ -5,7 +5,7 @@ from ld37.components.entity import Entity
 from ld37.components.manualCharacterInputComponent import ManualCharacterInputComponent
 from ld37.components.movementComponent import MovementComponent
 from ld37.display.camera import Camera
-from ld37.common
+from ld37.common.utils.libutils import update_image_rect
 
 class Ldjam:
     def __init__(self, title):
@@ -17,7 +17,8 @@ class Ldjam:
         self.clock = pygame.time.Clock()
         self.pc = Entity(1, [ManualCharacterInputComponent(), MovementComponent()])
         self.pc.done = False
-        self.pc.rect = rect.Rect(0, 0, 30, 30)
+        self.pc.rect = pygame.rect.Rect(0, 0, 30, 30)
+        self.pc.image = pygame.Surface((30,30))
         self.pc.speed = 200 #200 pixels/second
         self.camera = Camera(800, 600, 1600, 1200)
 
@@ -28,7 +29,9 @@ class Ldjam:
             self.pc.update(game_time)
             self.camera.update(self.pc)
 
-            self.screen.blit(self.pc.image, camera.apply(self.pc))
+            update_image_rect(self.pc.image, self.pc.rect)
+
+            self.screen.blit(self.pc.image, self.camera.apply(self.pc))
 
             #Gotta move this
             #pygame.draw.rect(self.screen, Colors.RED, self.pc.rect, 0)

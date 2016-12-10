@@ -9,7 +9,7 @@ class Camera(object):
         return target.rect.move(self.state.topleft)
 
     def update(self, target):
-        self.state = self.cameraMan.update_camera_view(self.state, target.rect)
+        self.state = self.camera_man.update_camera_view(self.state, target.rect)
 
 class CameraMan():
     def __init__(self, screen_width, screen_height):
