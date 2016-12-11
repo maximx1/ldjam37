@@ -19,16 +19,16 @@ class ManualCharacterInputComponent:
 
         keys_pressed = pygame.key.get_pressed()
 
-        entity.x_direction = 0
-        entity.y_direction = 0
+        entity.x_direction = 0.0
+        entity.y_direction = 0.0
         if keys_pressed[pygame.K_a]:
-            entity.x_direction = -1
+            entity.x_direction = -1.0
         if keys_pressed[pygame.K_d]:
-            entity.x_direction = 1
+            entity.x_direction = 1.9
         if keys_pressed[pygame.K_w]:
-            entity.y_direction = -1
+            entity.y_direction = -1.0
         if keys_pressed[pygame.K_s]:
-            entity.y_direction = 1
+            entity.y_direction = 1.9
 
 class LinearMovementComponent:
     def __init__(self, direction):
@@ -45,12 +45,12 @@ class LinearMovementComponent:
 
 class MovementComponent:
     def update(self, entity, game_time):
-        if entity.x_direction != 0:
+        if entity.x_direction != 0.0:
             delta = game_time / 1000.0 * entity.speed
             entity.rect.x = entity.rect.x + entity.x_direction * delta
             if entity.is_collidable:
                 detect_collision(entity, entity.x_direction, 0)
-        if entity.y_direction != 0:
+        if entity.y_direction != 0.0:
             delta = game_time / 1000.0 * entity.speed
             entity.rect.y = entity.rect.y + entity.y_direction * delta
             if entity.is_collidable:
