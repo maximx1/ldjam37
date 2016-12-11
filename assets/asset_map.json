@@ -338,24 +338,19 @@
       }
     }
   ],
-  "audio" : [
+  "sound" : [
     {
       "sound_id" : 1,
-      "name" : "BGM_1",
-      "filename" : "assets/audio/music/ld37dungeon.ogg"
-    },
-    {
-      "sound_id" : 11,
       "name" : "explosion_1",
       "filename" : "assets/audio/soundclips/explosion.ogg"
     },
     {
-      "sound_id" : 12,
+      "sound_id" : 2,
       "name" : "explosion_2",
       "filename" : "assets/audio/soundclips/flashbang.ogg"
     },
     {
-      "sound_id" : 13,
+      "sound_id" : 3,
       "name" : "explosion_3",
       "filename" : "assets/audio/soundclips/fun_explosion.ogg"
     },
@@ -538,6 +533,13 @@
       "sound_id" : 131,
       "name" : "clock_strikes_twelve",
       "filename" : "assets/audio/soundclips/clock_strikes_twelve.ogg"
+    }
+  ],
+  "song" : [
+    {
+      "song_id" : 1,
+      "name" : "BGM_1",
+      "filename" : "assets/audio/music/ld37dungeon.ogg"
     }
   ]
 }
