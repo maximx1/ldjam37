@@ -27,7 +27,7 @@ class AssetManager:
                     AssetManager.asset_dictionary[texture_key] = main_surface.subsurface(pygame.Rect(origin, dimensions))
                     return AssetManager.asset_dictionary[texture_key]
         else:
-            return AssetManager.asset_dictionary.get(name)
+            return AssetManager.asset_dictionary.get(texture_key)
         print "No such texture with name: " + name
 
     def request_sound(self, name):
@@ -40,7 +40,7 @@ class AssetManager:
                     AssetManager.asset_dictionary[sound_key] = pygame.mixer.Sound(sound['filename'])
                     return AssetManager.asset_dictionary[sound_key]
         else:
-            return AssetManager.asset_dictionary.get(name)
+            return AssetManager.asset_dictionary.get(sound_key)
         print "No such sound with name: " + name
 
     def load_song(self, name):

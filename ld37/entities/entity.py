@@ -17,14 +17,18 @@ class Entity:
         for component in self.components:
             component.update(self, game_time)
 
-def create_playable_character(entity_id, start_pos):
-    e = Entity(entity_id, [ManualCharacterInputComponent(), MovementComponent()])
+def create_playable_character(entity_id, start_pos, start_direction, sprite_name):
+    e = Entity(entity_id, [ManualCharacterInputComponent(), MovementComponent(), SpriteAnimationComponent()])
     e.done = False
     e.rect = pygame.rect.Rect(start_pos[0], start_pos[1], 30, 30)
     e.image = pygame.Surface((30, 30))
     e.speed = 200 #200 pixels/second
     e.is_displayable = True
     e.is_collidable = True
+    e.sprite_direction = start_direction
+    e.sprite_name = sprite_name
+    e.time_since_last_step = 0
+    e.sprite_step = "1"
     return e
 
 def create_static_object(entity_id, start_pos, is_displayable, is_collidable):
