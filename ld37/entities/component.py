@@ -1,5 +1,5 @@
 import pygame
-from ld37.common.utils.libutils import detect_collision
+from ld37.common.utils.libutils import *
 
 class DrawComponent:
     def update(entity, game_time):
@@ -42,7 +42,8 @@ class MovementComponent:
 
 class StaticObjectAnimationComponent:
     def update(self, entity, game_time):
-        entity.image = entity.asset_manager.request_texture(entity.img_name)
+        image_utils = ImageUtils(entity.asset_manager.request_texture(entity.img_name))
+        entity.image = image_utils.scale(entity.rect.w, entity.rect.h).get_image()
 
 class SpriteAnimationComponent:
     def update(self, entity, game_time):

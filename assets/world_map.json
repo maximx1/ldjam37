@@ -79,8 +79,8 @@
       "y": 170
     },
     "dimension": {
-      "w": 96,
-      "h": 96
+      "w": 30,
+      "h": 30
     },
     "image": ["plain_crate_1"],
     "starting_image": "plain_crate_1"
