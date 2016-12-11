@@ -51,8 +51,6 @@ class AssetManager:
             for song in song_array:
                 if song['name'] == name:
                     AssetManager.asset_dictionary[song_key] = song['filename']
-                    pygame.mixer.music.load(AssetManager.asset_dictionary[song_key])
-                    return
-        else:
-            return
-        print "No such song with name: " + name
+        if AssetManager.asset_dictionary.get(song_key) is not None:
+            pygame.mixer.music.load(AssetManager.asset_dictionary[song_key])
+            pygame.mixer.music.play()

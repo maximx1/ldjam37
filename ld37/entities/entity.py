@@ -10,6 +10,7 @@ class Entity:
         self.is_current_player_controllable = False
         self.is_displayable = False
         self.is_collidable = False
+        self.speed = 0
 
     def setup(self):
         return
@@ -39,7 +40,10 @@ def create_static_object(entity_id, start_pos, size, img_name, is_displayable, i
     e.rect = pygame.rect.Rect(start_pos[0], start_pos[1], size[0], size[1])
     e.image = pygame.Surface(size)
     e.img_name = img_name
-    e.speed = 0
     e.is_displayable = is_displayable
     e.is_collidable = is_collidable
     return e
+
+def trigger_rect(entity_id, start_pos, size, triggers):
+    e = Entity(entity_id, [])
+    e.rect = pygame.rect.Rect(start_pos[0], start_pos[1], size[0], size[1])

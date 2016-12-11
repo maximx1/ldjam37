@@ -540,6 +540,11 @@
       "song_id" : 1,
       "name" : "BGM_1",
       "filename" : "assets/audio/music/ld37dungeon.ogg"
+    },
+    {
+      "song_id": 2,
+      "name": "BGM_2",
+      "filename": "assets/audio/music/ld37run.mp3"
     }
   ]
 }
