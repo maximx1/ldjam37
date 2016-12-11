@@ -337,5 +337,207 @@
         "h": 48
       }
     }
+  ],
+  "audio" : [
+    {
+      "sound_id" : 1,
+      "name" : "BGM_1",
+      "filename" : "assets/audio/music/ld37dungeon.ogg"
+    },
+    {
+      "sound_id" : 11,
+      "name" : "explosion_1",
+      "filename" : "assets/audio/soundclips/explosion.ogg"
+    },
+    {
+      "sound_id" : 12,
+      "name" : "explosion_2",
+      "filename" : "assets/audio/soundclips/flashbang.ogg"
+    },
+    {
+      "sound_id" : 13,
+      "name" : "explosion_3",
+      "filename" : "assets/audio/soundclips/fun_explosion.ogg"
+    },
+    {
+      "sound_id" : 21,
+      "name" : "paper_1",
+      "filename" : "assets/audio/soundclips/paper_crush_medium_1.ogg"
+    },
+    {
+      "sound_id" : 22,
+      "name" : "paper_2",
+      "filename" : "assets/audio/soundclips/paper_crush_medium_2.ogg"
+    },
+    {
+      "sound_id" : 23,
+      "name" : "paper_3",
+      "filename" : "assets/audio/soundclips/paper_crush_short_1.ogg"
+    },
+    {
+      "sound_id" : 24,
+      "name" : "paper_4",
+      "filename" : "assets/audio/soundclips/paper_crush_short_2.ogg"
+    },
+    {
+      "sound_id" : 25,
+      "name" : "paper_5",
+      "filename" : "assets/audio/soundclips/paper_crush_short_3.ogg"
+    },
+    {
+      "sound_id" : 26,
+      "name" : "paper_6",
+      "filename" : "assets/audio/soundclips/paper_crush_short_4.ogg"
+    },
+    {
+      "sound_id" : 27,
+      "name" : "paper_7",
+      "filename" : "assets/audio/soundclips/paper_crush_slow.ogg"
+    },
+    {
+      "sound_id" : 28,
+      "name" : "paper_8",
+      "filename" : "assets/audio/soundclips/paper_flip_1.ogg"
+    },
+    {
+      "sound_id" : 29,
+      "name" : "paper_9",
+      "filename" : "assets/audio/soundclips/paper_flip_2.ogg"
+    },
+    {
+      "sound_id" : 30,
+      "name" : "paper_10",
+      "filename" : "assets/audio/soundclips/paper_flip_3.ogg"
+    },
+    {
+      "sound_id" : 32,
+      "name" : "paper_12",
+      "filename" : "assets/audio/soundclips/paper_medium_3.ogg"
+    },
+    {
+      "sound_id" : 33,
+      "name" : "paper_13",
+      "filename" : "assets/audio/soundclips/paper_medium_4.ogg"
+    },
+    {
+      "sound_id" : 34,
+      "name" : "paper_14",
+      "filename" : "assets/audio/soundclips/paper_medium_5.ogg"
+    },
+    {
+      "sound_id" : 35,
+      "name" : "paper_15",
+      "filename" : "assets/audio/soundclips/paper_scrape_1.ogg"
+    },
+    {
+      "sound_id" : 41,
+      "name" : "footstep_gravel_1",
+      "filename" : "assets/audio/soundclips/dirt_gravel_footstep_1.ogg"
+    },
+    {
+      "sound_id" : 42,
+      "name" : "footstep_gravel_2",
+      "filename" : "assets/audio/soundclips/dirt_gravel_footstep_2.ogg"
+    },
+    {
+      "sound_id" : 43,
+      "name" : "footstep_gravel_3",
+      "filename" : "assets/audio/soundclips/dirt_gravel_footstep_3.ogg"
+    },
+    {
+      "sound_id" : 44,
+      "name" : "footstep_gravel_4",
+      "filename" : "assets/audio/soundclips/dirt_gravel_footstep_4.ogg"
+    },
+    {
+      "sound_id" : 45,
+      "name" : "footstep_concrete_1",
+      "filename" : "assets/audio/soundclips/concrete_footstep_1.ogg"
+    },
+    {
+      "sound_id" : 46,
+      "name" : "footstep_concrete_2",
+      "filename" : "assets/audio/soundclips/concrete_footstep_2.ogg"
+    },
+    {
+      "sound_id" : 47,
+      "name" : "footstep_concrete_3",
+      "filename" : "assets/audio/soundclips/concrete_footstep_3.ogg"
+    },
+    {
+      "sound_id" : 48,
+      "name" : "footstep_concrete_4",
+      "filename" : "assets/audio/soundclips/concrete_footstep_4.ogg"
+    },
+    {
+      "sound_id" : 49,
+      "name" : "footstep_chainlink_1",
+      "filename" : "assets/audio/soundclips/chainlink_fence_footstep_1.ogg"
+    },
+    {
+      "sound_id" : 50,
+      "name" : "footstep_chainlink_2",
+      "filename" : "assets/audio/soundclips/chainlink_fence_footstep_2.ogg"
+    },
+    {
+      "sound_id" : 51,
+      "name" : "footstep_chainlink_3",
+      "filename" : "assets/audio/soundclips/chainlink_fence_footstep_3.ogg"
+    },
+    {
+      "sound_id" : 52,
+      "name" : "footstep_chainlink_4",
+      "filename" : "assets/audio/soundclips/chainlink_fence_footstep_4.ogg"
+    },
+    {
+      "sound_id" : 53,
+      "name" : "footsteps_hard_ground_1",
+      "filename" : "assets/audio/soundclips/concrete_footstep_1.ogg"
+    },
+    {
+      "sound_id" : 54,
+      "name" : "footsteps_hard_ground_2",
+      "filename" : "assets/audio/soundclips/concrete_footstep_2.ogg"
+    },
+    {
+      "sound_id" : 55,
+      "name" : "footsteps_hard_ground_3",
+      "filename" : "assets/audio/soundclips/concrete_footstep_3.ogg"
+    },
+    {
+      "sound_id" : 56,
+      "name" : "footsteps_glass",
+      "filename" : "assets/audio/soundclips/glass_footstep_1.ogg"
+    },
+    {
+      "sound_id" : 57,
+      "name" : "footsteps_soft_ground",
+      "filename" : "assets/audio/soundclips/hiking_on_soft_ground_1.ogg"
+    },
+    {
+      "sound_id" : 58,
+      "name" : "footsteps_soft_ground_slip",
+      "filename" : "assets/audio/soundclips/hiking_on_soft_ground_slip_1.ogg"
+    },
+    {
+      "sound_id" : 81,
+      "name" : "male_scream_1",
+      "filename" : "assets/audio/soundclips/male_scream.ogg"
+    },
+    {
+      "sound_id" : 101,
+      "name" : "sliding_door_1",
+      "filename" : "assets/audio/soundclips/sliding_doors.ogg"
+    },
+    {
+      "sound_id" : 121,
+      "name" : "clock_ticking",
+      "filename" : "assets/audio/soundclips/ticking_clock.ogg"
+    },
+    {
+      "sound_id" : 131,
+      "name" : "clock_strikes_twelve",
+      "filename" : "assets/audio/soundclips/clock_strikes_twelve.ogg"
+    }
   ]
 }
