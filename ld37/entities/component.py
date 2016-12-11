@@ -1,4 +1,6 @@
 import pygame
+
+from ld37.common.constants import Colors
 from ld37.common.utils.libutils import *
 
 class DrawComponent:
@@ -60,6 +62,15 @@ class StaticObjectAnimationComponent:
     def update(self, entity, game_time):
         image_utils = ImageUtils(entity.asset_manager.request_texture(entity.img_name))
         entity.image = image_utils.scale(entity.rect.w, entity.rect.h).get_image()
+
+class TextBoxAnimationComponent:
+    def update(self, entity, game_time):
+        font = pygame.font.SysFont(pygame.font.get_default_font(), 12)
+        text_surface = font.render(entity.text, False, Colors.WHITE)
+        text_dimension = font.size(entity.text)
+        textbox = pygame.Surface(text_dimension).fill(Colors.BLACK)
+        textbox.blit(text_surface, (entity.pos_x, entity.pos_y))
+        entity.image = textbox
 
 class SpriteAnimationComponent:
     def update(self, entity, game_time):

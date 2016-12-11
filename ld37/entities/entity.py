@@ -50,6 +50,17 @@ def create_static_object(entity_id, start_pos, size, img_name, is_displayable, i
     e.is_collidable = is_collidable
     return e
 
+def create_text_box(entity_id, start_pos, text, display_time):
+    e = Entity(entity_id, [])
+    e.pos_x = start_pos[0]
+    e.pos_y = start_pos[1]
+    e.speed = 0
+    e.is_displayable = True
+    e.is_collidable = False
+    e.text = text
+    e.display_time = display_time
+    return e
+
 def create_trigger(entity_id, start_pos, size, trigger_str, trigger_props):
     e = Entity(entity_id, [TriggerComponent()])
     e.rect = pygame.rect.Rect(start_pos[0], start_pos[1], size[0], size[1])
