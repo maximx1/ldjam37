@@ -1,5 +1,9 @@
 import pygame
 
+class DrawComponent:
+    def update(entity, game_time):
+        pygame.draw.rect()
+
 class ManualCharacterInputComponent:
     def update(self, entity, game_time):
         for event in pygame.event.get():
@@ -21,3 +25,9 @@ class ManualCharacterInputComponent:
             entity.y_direction = -1
         if keys_pressed[pygame.K_s]:
             entity.y_direction = 1
+
+class MovementComponent:
+    def update(self, entity, game_time):
+        delta = game_time / 1000.0 * entity.speed
+        entity.rect.x = entity.rect.x + entity.x_direction * delta
+        entity.rect.y = entity.rect.y + entity.y_direction * delta

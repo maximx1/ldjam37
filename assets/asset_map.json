@@ -1,0 +1,144 @@
+{
+  "textures" : [
+    {
+      "entity_id" : 1,
+      "name" : "plain_crate_1",
+      "filename": "assets/textures/obj_crate001.png",
+      "origin": {
+        "x": 0,
+        "y": 0
+      },
+      "dimensions": {
+        "w": 96,
+        "h": 96
+      }
+    },
+    {
+      "entity_id" : 2,
+      "name" : "cross_crate",
+      "filename": "assets/textures/obj_crate002.png",
+      "origin": {
+        "x": 0,
+        "y": 0
+      },
+      "dimensions": {
+        "w": 96,
+        "h": 96
+      }
+    },
+    {
+      "entity_id" : 3,
+      "name" : "plain_crate_2",
+      "filename": "assets/textures/obj_crate003.png",
+      "origin": {
+        "x": 0,
+        "y": 0
+      },
+      "dimensions": {
+        "w": 96,
+        "h": 96
+      }
+    },
+    {
+      "entity_id" : 4,
+      "name" : "plain_crate_3",
+      "filename": "assets/textures/obj_crate004.png",
+      "origin": {
+        "x": 0,
+        "y": 0
+      },
+      "dimensions": {
+        "w": 96,
+        "h": 96
+      }
+    },
+    {
+      "entity_id" : 5,
+      "name" : "cross_crate_2",
+      "filename": "assets/textures/obj_crate005.png",
+      "origin": {
+        "x": 0,
+        "y": 0
+      },
+      "dimensions": {
+        "w": 96,
+        "h": 96
+      }
+    },
+    {
+      "entity_id" : 6,
+      "name" : "box_1",
+      "filename": "assets/textures/obj_box001.png",
+      "origin": {
+        "x": 0,
+        "y": 0
+      },
+      "dimensions": {
+        "w": 96,
+        "h": 96
+      }
+    },
+    {
+      "entity_id" : 7,
+      "name" : "box_2",
+      "filename": "assets/textures/obj_box001.png",
+      "origin": {
+        "x": 0,
+        "y": 0
+      },
+      "dimensions": {
+        "w": 96,
+        "h": 96
+      }
+    },
+    {
+      "entity_id" : 8,
+      "name" : "box_3",
+      "filename": "assets/textures/obj_box001.png",
+      "origin": {
+        "x": 0,
+        "y": 0
+      },
+      "dimensions": {
+        "w": 96,
+        "h": 96
+      }
+    },
+    {
+      "entity_id" : 9,
+      "name" : "box_4",
+      "filename": "assets/textures/obj_box001.png",
+      "origin": {
+        "x": 0,
+        "y": 0
+      },
+      "dimensions": {
+        "w": 96,
+        "h": 96
+      }
+    },
+    {
+      "entity_id" : 9,
+      "name" : "box_4",
+      "filename": "assets/textures/obj_box001.png",
+      "origin": {
+        "x": 0,
+        "y": 0
+      },
+      "dimensions": {
+        "w": 96,
+        "h": 96
+      }
+    }
+  ],
+  "sounds" : [
+    {
+
+    }
+  ],
+  "songs" : [
+    {
+
+    }
+  ]
+}
