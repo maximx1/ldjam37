@@ -1,6 +1,6 @@
 import pygame
 from ld37.common.utils.libutils import detect_collision
-
+from ld37.common.constants import Colors
 class DrawComponent:
     def update(entity, game_time):
         pygame.draw.rect()
@@ -43,6 +43,15 @@ class MovementComponent:
 class StaticObjectAnimationComponent:
     def update(self, entity, game_time):
         entity.image = entity.asset_manager.request_texture(entity.img_name)
+
+class TextBoxAnimationComponent:
+    def update(self, entity, game_time):
+        font = pygame.font.SysFont(pygame.font.get_default_font(), 12)
+        text_surface = font.render(entity.text, False, Colors.WHITE)
+        text_dimension = font.size(entity.text)
+        textbox = pygame.Surface(text_dimension).fill(Colors.BLACK)
+        textbox.blit(text_surface, (entity.pos_x, entity.pos_y))
+        entity.image = textbox
 
 class SpriteAnimationComponent:
     def update(self, entity, game_time):
