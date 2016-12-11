@@ -1,6 +1,5 @@
 import pygame
 from ld37.common.utils.libutils import detect_collision
-from ld37.common.utils.assetManager import AssetManager
 
 class DrawComponent:
     def update(entity, game_time):
@@ -41,9 +40,12 @@ class MovementComponent:
             if entity.is_collidable:
                 detect_collision(entity, 0, entity.y_direction)
 
+class StaticObjectAnimationComponent:
+    def update(self, entity, game_time):
+        entity.image = entity.asset_manager.request_texture(entity.img_name)
+
 class SpriteAnimationComponent:
     def update(self, entity, game_time):
-
         if entity.x_direction > 0 and (entity.sprite_direction == "left" or entity.y_direction == 0)  :
             entity.sprite_direction = "right"
         elif entity.x_direction < 0 and (entity.sprite_direction == "right" or entity.y_direction == 0):
@@ -60,4 +62,4 @@ class SpriteAnimationComponent:
 
         image_name = entity.sprite_name + "_" + entity.sprite_direction + "_" + entity.sprite_step
 
-        entity.image = AssetManager().request_texture(image_name)
+        entity.image = entity.asset_manager.request_texture(image_name)

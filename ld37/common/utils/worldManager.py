@@ -15,14 +15,14 @@ class WorldLoader:
 
     def build_entity(self, entity):
         if "playable_character" == entity["type"]:
-            return create_playable_character(entity["entity_id"], (entity["start_pos"]["x"], entity["start_pos"]["y"]), entity["starting_image"])
+            return create_playable_character(entity["entity_id"], (entity["start_pos"]["x"], entity["start_pos"]["y"]), (entity["dimension"]["w"], entity["dimension"]["h"]), entity["starting_image"])
         if "obj_st_disp_coll" == entity["type"]:
-            return create_static_object(entity["entity_id"], (entity["start_pos"]["x"], entity["start_pos"]["y"]), (entity["dimension"]["w"], entity["dimension"]["h"]), True, True)
+            return create_static_object(entity["entity_id"], (entity["start_pos"]["x"], entity["start_pos"]["y"]), (entity["dimension"]["w"], entity["dimension"]["h"]), entity["starting_image"], True, True)
         if "obj_st_disp" == entity["type"]:
-            return create_static_object(entity["entity_id"], (entity["start_pos"]["x"], entity["start_pos"]["y"]), (entity["dimension"]["w"], entity["dimension"]["h"]), True, False)
+            return create_static_object(entity["entity_id"], (entity["start_pos"]["x"], entity["start_pos"]["y"]), (entity["dimension"]["w"], entity["dimension"]["h"]), entity["starting_image"], True, False)
         if "obj_st_coll" == entity["type"]:
-            return create_static_object(entity["entity_id"], (entity["start_pos"]["x"], entity["start_pos"]["y"]), (entity["dimension"]["w"], entity["dimension"]["h"]), False, True)
+            return create_static_object(entity["entity_id"], (entity["start_pos"]["x"], entity["start_pos"]["y"]), (entity["dimension"]["w"], entity["dimension"]["h"]), entity["starting_image"], False, True)
         if "obj_st" == entity["type"]:
-            return create_static_object(entity["entity_id"], (entity["start_pos"]["x"], entity["start_pos"]["y"]), (entity["dimension"]["w"], entity["dimension"]["h"]), False, False)
+            return create_static_object(entity["entity_id"], (entity["start_pos"]["x"], entity["start_pos"]["y"]), (entity["dimension"]["w"], entity["dimension"]["h"]), entity["starting_image"], False, False)
         if "obj_st_disp_coll" == entity["type"]:
-            return create_static_object(entity["entity_id"], (entity["start_pos"]["x"], entity["start_pos"]["y"]), (entity["dimension"]["w"], entity["dimension"]["h"]), True, True)
+            return create_static_object(entity["entity_id"], (entity["start_pos"]["x"], entity["start_pos"]["y"]), (entity["dimension"]["w"], entity["dimension"]["h"]), entity["starting_image"], True, True)

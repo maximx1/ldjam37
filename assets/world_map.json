@@ -7,8 +7,8 @@
       "y": 100
     },
     "dimension": {
-      "w": 30,
-      "h": 30
+      "w": 32,
+      "h": 48
     },
     "speed": 200,
     "image": [],
@@ -73,7 +73,7 @@
   {
     "entity_id": 6,
     "type": "obj_st_disp_coll",
-    "name": "crate"
+    "name": "crate",
     "start_pos": {
       "x": 310,
       "y": 170
@@ -125,21 +125,6 @@
     },
     "dimension": {
       "w": 30,
-      "h": 1200
-    },
-    "image": [],
-    "starting_image": ""
-  },
-  {
-    "entity_id": 10,
-    "type": "obj_st_disp",
-    "name": "plain floor",
-    "start_pos": {
-      "x": 100,
-      "y": 100
-    },
-    "dimension": {
-      "w": 1600,
       "h": 1200
     },
     "image": [],
