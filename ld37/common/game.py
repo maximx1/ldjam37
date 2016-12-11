@@ -1,9 +1,7 @@
 import pygame, sys
 from pygame.locals import *
 from ld37.common.constants import Colors
-from ld37.components.entity import Entity
-from ld37.components.manualCharacterInputComponent import ManualCharacterInputComponent
-from ld37.components.movementComponent import MovementComponent
+from ld37.common.startupactivities import *
 from ld37.display.camera import Camera
 from ld37.common.utils.libutils import update_image_rect
 
@@ -11,30 +9,34 @@ class Ldjam:
     def __init__(self, title):
         pygame.init()
         pygame.display.set_caption(title)
-        self.screen = pygame.display.set_mode((800, 600))
+        self.window_d = (800, 600)
+        self.screen = pygame.display.set_mode(self.window_d)
 
     def setup(self):
         self.clock = pygame.time.Clock()
-        self.pc = Entity(1, [ManualCharacterInputComponent(), MovementComponent()])
-        self.pc.done = False
-        self.pc.rect = pygame.rect.Rect(0, 0, 30, 30)
-        self.pc.image = pygame.Surface((30,30))
-        self.pc.speed = 200 #200 pixels/second
-        self.camera = Camera(800, 600, 1600, 1200)
+        self.master_entity_list = create_starting_entities()
+        self.camera = Camera(self.window_d[0], self.window_d[1], 1600, 1200)
 
     def play(self):
-        while not self.pc.done:
+        pc = self.get_playable_entity()
+        while not pc.done:
+            # Set up tick
+            pc = self.get_playable_entity()
             game_time = self.clock.tick(45)
             self.screen.fill(Colors.WHITE)
-            self.pc.update(game_time)
-            self.camera.update(self.pc)
 
-            update_image_rect(self.pc.image, self.pc.rect)
+            # update
+            for entity in self.master_entity_list:
+                entity.update(game_time)
+            self.camera.update(pc)
 
-            self.screen.blit(self.pc.image, self.camera.apply(self.pc))
-
-            #Gotta move this
-            #pygame.draw.rect(self.screen, Colors.RED, self.pc.rect, 0)
+            # display
+            for entity in [x for x in self.master_entity_list if x.is_displayable]:
+                update_image_rect(entity.image, entity.rect)
+                self.screen.blit(entity.image, self.camera.apply(entity))
 
             pygame.display.flip()
         pygame.quit()
+
+    def get_playable_entity(self):
+        return next(iter([x for x in self.master_entity_list if x.is_current_player_controllable]), None)
