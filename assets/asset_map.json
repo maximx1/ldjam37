@@ -535,11 +535,11 @@
       "filename" : "assets/audio/soundclips/clock_strikes_twelve.ogg"
     }
   ],
-  "music" : [
+  "song" : [
     {
-      "music_id" : 1,
+      "song_id" : 1,
       "name" : "BGM_1",
       "filename" : "assets/audio/music/ld37dungeon.ogg"
-    },
+    }
   ]
 }
