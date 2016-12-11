@@ -18,7 +18,7 @@ class Entity:
             component.update(self, game_time)
 
 def create_playable_character(entity_id, start_pos):
-    e = Entity(entity_id, [ManualCharacterInputComponent(), MovementComponent(), CollisionComponent()])
+    e = Entity(entity_id, [ManualCharacterInputComponent(), MovementComponent()])
     e.done = False
     e.rect = pygame.rect.Rect(start_pos[0], start_pos[1], 30, 30)
     e.image = pygame.Surface((30, 30))
