@@ -38,18 +38,18 @@ class CollisionComponent:
     def update(self, entity, game_time):
         for collidable in [x for x in entity.master_entity_list if x.is_collidable and entity.entity_id != x.entity_id]:
             if entity.rect.colliderect(collidable.rect):
-               self.collide_x(entity, collidable)
+                self.collide_x(entity, collidable)
             if entity.rect.colliderect(collidable.rect):
-               self.collide_y(entity, collidable)
+                self.collide_y(entity, collidable)
 
     def collide_x(self, entity, collidable):
-        if entity.x_direction > 0 and entity.rect.right > collidable.rect.left and entity.oldrect.right < collidable.rect.left:
+        if entity.x_direction > 0:
             entity.rect.right = entity.oldrect.right
-        elif entity.x_direction < 0 and entity.rect.left < collidable.rect.right and entity.oldrect.left > collidable.rect.right:
+        elif entity.x_direction < 0:
             entity.rect.left = entity.oldrect.left
 
     def collide_y(self, entity, collidable):
-        if entity.y_direction > 0 and entity.rect.bottom > collidable.rect.top and entity.oldrect.bottom < collidable.rect.top:
+        if entity.y_direction > 0:
             entity.rect.bottom = entity.oldrect.bottom
-        elif entity.y_direction < 0 and entity.rect.top < collidable.rect.bottom and entity.oldrect.top > collidable.rect.bottom:
+        elif entity.y_direction < 0:
             entity.rect.top = entity.oldrect.top
