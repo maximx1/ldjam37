@@ -23,3 +23,9 @@ def detect_collision(entity, x_direction, y_direction):
                 entity.rect.bottom = collidable.rect.top
             if y_direction < 0:
                 entity.rect.top = collidable.rect.bottom
+
+def get_playable_entity(entities):
+    return next(iter([x for x in entities if x.is_current_player_controllable]), None)
+
+def get_playable_entity_by_id(entity_id, entities):
+    return next(iter([x for x in entities if x.entity_id == entity_id]), None)

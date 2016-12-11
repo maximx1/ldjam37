@@ -1,0 +1,147 @@
+[
+  {
+    "entity_id": 1,
+    "type": "playable_character",
+    "start_pos": {
+      "x": 100,
+      "y": 100
+    },
+    "dimension": {
+      "w": 30,
+      "h": 30
+    },
+    "speed": 200,
+    "image": [],
+    "starting_image": "dennis_up_1"
+  },
+  {
+    "entity_id": 2,
+    "type": "obj_st_disp_coll",
+    "start_pos": {
+      "x": 170,
+      "y": 170
+    },
+    "dimension": {
+      "w": 30,
+      "h": 30
+    },
+    "image": [],
+    "starting_image": ""
+  },
+  {
+    "entity_id": 3,
+    "type": "obj_st_disp",
+    "start_pos": {
+      "x": 205,
+      "y": 170
+    },
+    "dimension": {
+      "w": 30,
+      "h": 30
+    },
+    "image": [],
+    "starting_image": ""
+  },
+  {
+    "entity_id": 4,
+    "type": "obj_st_coll",
+    "start_pos": {
+      "x": 240,
+      "y": 170
+    },
+    "dimension": {
+      "w": 30,
+      "h": 30
+    },
+    "image": [],
+    "starting_image": ""
+  },
+  {
+    "entity_id": 5,
+    "type": "obj_st",
+    "start_pos": {
+      "x": 275,
+      "y": 170
+    },
+    "dimension": {
+      "w": 30,
+      "h": 30
+    },
+    "image": [],
+    "starting_image": ""
+  },
+  {
+    "entity_id": 6,
+    "type": "obj_st_disp_coll",
+    "start_pos": {
+      "x": 310,
+      "y": 170
+    },
+    "dimension": {
+      "w": 30,
+      "h": 30
+    },
+    "image": [],
+    "starting_image": ""
+  },
+  {
+    "entity_id": 7,
+    "type": "obj_st_coll",
+    "name": "front border",
+    "start_pos": {
+      "x": 100,
+      "y": 1300
+    },
+    "dimension": {
+      "w": 1600,
+      "h": 30
+    },
+    "image": [],
+    "starting_image": ""
+  },
+  {
+    "entity_id": 8,
+    "type": "obj_st_coll",
+    "name": "left border",
+    "start_pos": {
+      "x": 70,
+      "y": 70
+    },
+    "dimension": {
+      "w": 30,
+      "h": 1200
+    },
+    "image": [],
+    "starting_image": ""
+  },
+  {
+    "entity_id": 9,
+    "type": "obj_st_coll",
+    "name": "right border",
+    "start_pos": {
+      "x": 1700,
+      "y": 100
+    },
+    "dimension": {
+      "w": 30,
+      "h": 1200
+    },
+    "image": [],
+    "starting_image": ""
+  },
+  {
+    "entity_id": 10,
+    "type": "obj_st_disp",
+    "name": "plain floor",
+    "start_pos": {
+      "x": 100,
+      "y": 100
+    },
+    "dimension": {
+      "w": 1600,
+      "h": 1200
+    },
+    "image": [],
+    "starting_image": ""
+  }
+]
