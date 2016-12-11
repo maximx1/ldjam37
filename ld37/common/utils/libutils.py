@@ -1,4 +1,5 @@
 import math
+import pygame
 
 def update_image_rect(image, rect):
     image_rect = image.get_rect()
@@ -29,3 +30,26 @@ def get_playable_entity(entities):
 
 def get_playable_entity_by_id(entity_id, entities):
     return next(iter([x for x in entities if x.entity_id == entity_id]), None)
+
+class ImageUtils:
+    def __init__(self, image):
+        self.image = image
+
+    def scale(self, newWidth, newHeight) :
+        self.image = pygame.transform.scale(self.image, (newWidth, newHeight))
+        return self
+
+    def rotate(self, angle):
+        self.image = pygame.transform.rotate(self.image, angle)
+        return self
+
+    def flip_vertical(self):
+        self.image = pygame.transform.flip(self.image, False, True)
+        return self
+
+    def flip_horizontal(self):
+        self.image = pygame.transform.flip(self.image, True, False)
+        return self
+
+    def get_image(self):
+        return self.image

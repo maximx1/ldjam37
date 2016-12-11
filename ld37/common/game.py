@@ -28,8 +28,11 @@ class Ldjam:
                 entity.update(game_time)
             self.camera.update(pc)
 
+            # clean up entities
+            self.master_entity_list[:] = [x for x in self.master_entity_list if x.is_active]
+
             # display
-            for entity in sorted([x for x in self.master_entity_list if x.is_displayable], key=lambda x: x.entity_id, reverse=True):
+            for entity in sorted([x for x in self.master_entity_list if x.is_displayable], key=lambda x: x.entity_id):
                 update_image_rect(entity.image, entity.rect)
                 self.screen.blit(entity.image, self.camera.apply(entity))
 

@@ -26,3 +26,5 @@ class WorldLoader:
             return create_static_object(entity["entity_id"], (entity["start_pos"]["x"], entity["start_pos"]["y"]), (entity["dimension"]["w"], entity["dimension"]["h"]), entity["starting_image"], False, False)
         if "obj_st_disp_coll" == entity["type"]:
             return create_static_object(entity["entity_id"], (entity["start_pos"]["x"], entity["start_pos"]["y"]), (entity["dimension"]["w"], entity["dimension"]["h"]), entity["starting_image"], True, True)
+        if "trigger" == entity["type"]:
+            return create_trigger(entity["entity_id"], (entity["start_pos"]["x"], entity["start_pos"]["y"]), (entity["dimension"]["w"], entity["dimension"]["h"]), entity["triggers"], entity["trigger_props"])
