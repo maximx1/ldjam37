@@ -33,8 +33,8 @@
     "type": "trigger",
     "name": "BGM_2 trigger",
     "start_pos": {
-      "x": 205,
-      "y": 170
+      "x": 100,
+      "y": 400
     },
     "dimension": {
       "w": 30,
@@ -44,6 +44,21 @@
     "trigger_props": {
       "song": "BGM_2"
     }
+  },
+  {
+    "entity_id": 10,
+    "type": "trigger",
+    "name": "Start game trigger",
+    "start_pos": {
+      "x": 100,
+      "y": 400
+    },
+    "dimension": {
+      "w": 30,
+      "h": 30
+    },
+    "triggers": "resumecontrol",
+    "trigger_props": {}
   },
   {
     "entity_id": 4,

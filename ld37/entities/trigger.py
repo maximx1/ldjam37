@@ -1,17 +1,26 @@
 from ld37.common.utils.libutils import *
+from ld37.entities.component import *
 
-def lookup_trigger_props(trigger_str):
-    toks = trigger_str.split("_")
-    return [y for y in [look_up_trigger(x) for x in toks] if y]
-
-def look_up_trigger(prop, ):
+def lookup_trigger(prop):
     if prop == "music":
         return MusicTrigger()
+    if prop == "resumecontrol":
+        return ResumePlayerControlTrigger()
 
 class MusicTrigger:
     def check(self, entity, game_time):
-        return entity.is_active and entity.rect.colliderect(get_playable_entity_by_id(1, entity.master_entity_list))
+        return entity.is_active and entity.rect.colliderect(get_playable_entity_by_id(1, entity.master_entity_list).rect)
 
     def activate(self, entity, game_time):
         entity.asset_manager.load_song(entity.trigger_props["song"])
+        entity.is_active = False
+
+class ResumePlayerControlTrigger:
+    def check(self, entity, game_time):
+        return entity.is_active and entity.rect.colliderect(get_playable_entity_by_id(1, entity.master_entity_list).rect)
+
+    def activate(self, entity, game_time):
+        pc = get_playable_entity_by_id(1, entity.master_entity_list)
+        del pc.components[0]
+        pc.components.insert(0, ManualCharacterInputComponent())
         entity.is_active = False

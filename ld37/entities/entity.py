@@ -53,6 +53,6 @@ def create_static_object(entity_id, start_pos, size, img_name, is_displayable, i
 def create_trigger(entity_id, start_pos, size, trigger_str, trigger_props):
     e = Entity(entity_id, [TriggerComponent()])
     e.rect = pygame.rect.Rect(start_pos[0], start_pos[1], size[0], size[1])
-    e.triggers = lookup_trigger_props(trigger_str)
+    e.triggers = [lookup_trigger(trigger_str)]
     e.trigger_props = trigger_props
     return e
