@@ -15,19 +15,6 @@
     },
     {
       "entity_id" : 2,
-      "name" : "cross_crate",
-      "filename": "assets/textures/obj_crate002.png",
-      "origin": {
-        "x": 0,
-        "y": 0
-      },
-      "dimensions": {
-        "w": 96,
-        "h": 96
-      }
-    },
-    {
-      "entity_id" : 3,
       "name" : "plain_crate_2",
       "filename": "assets/textures/obj_crate003.png",
       "origin": {
@@ -40,9 +27,22 @@
       }
     },
     {
-      "entity_id" : 4,
+      "entity_id" : 3,
       "name" : "plain_crate_3",
       "filename": "assets/textures/obj_crate004.png",
+      "origin": {
+        "x": 0,
+        "y": 0
+      },
+      "dimensions": {
+        "w": 96,
+        "h": 96
+      }
+    },
+    {
+      "entity_id" : 4,
+      "name" : "cross_crate",
+      "filename": "assets/textures/obj_crate002.png",
       "origin": {
         "x": 0,
         "y": 0
@@ -81,7 +81,7 @@
     {
       "entity_id" : 7,
       "name" : "box_2",
-      "filename": "assets/textures/obj_box001.png",
+      "filename": "assets/textures/obj_box002.png",
       "origin": {
         "x": 0,
         "y": 0
@@ -94,7 +94,7 @@
     {
       "entity_id" : 8,
       "name" : "box_3",
-      "filename": "assets/textures/obj_box001.png",
+      "filename": "assets/textures/obj_box003.png",
       "origin": {
         "x": 0,
         "y": 0
@@ -107,7 +107,7 @@
     {
       "entity_id" : 9,
       "name" : "box_4",
-      "filename": "assets/textures/obj_box001.png",
+      "filename": "assets/textures/obj_box004.png",
       "origin": {
         "x": 0,
         "y": 0
@@ -119,8 +119,8 @@
     },
     {
       "entity_id" : 9,
-      "name" : "box_4",
-      "filename": "assets/textures/obj_box001.png",
+      "name" : "box_5",
+      "filename": "assets/textures/obj_box005.png",
       "origin": {
         "x": 0,
         "y": 0
@@ -129,16 +129,213 @@
         "w": 96,
         "h": 96
       }
-    }
-  ],
-  "sounds" : [
+    },
     {
-
-    }
-  ],
-  "songs" : [
+      "entity_id" : 101,
+      "name" : "dennis_down_1",
+      "filename": "assets/textures/schoolboy.png",
+      "origin": {
+        "x": 0,
+        "y": 0
+      },
+      "dimensions": {
+        "w": 32,
+        "h": 48
+      }
+    },
     {
-
+      "entity_id" : 102,
+      "name" : "dennis_down_2",
+      "filename": "assets/textures/schoolboy.png",
+      "origin": {
+        "x": 32,
+        "y": 0
+      },
+      "dimensions": {
+        "w": 32,
+        "h": 48
+      }
+    },
+    {
+      "entity_id" : 103,
+      "name" : "dennis_down_3",
+      "filename": "assets/textures/schoolboy.png",
+      "origin": {
+        "x": 64,
+        "y": 0
+      },
+      "dimensions": {
+        "w": 32,
+        "h": 48
+      }
+    },
+    {
+      "entity_id" : 104,
+      "name" : "dennis_down_4",
+      "filename": "assets/textures/schoolboy.png",
+      "origin": {
+        "x": 96,
+        "y": 0
+      },
+      "dimensions": {
+        "w": 32,
+        "h": 48
+      }
+    },
+    {
+      "entity_id" : 105,
+      "name" : "dennis_left_1",
+      "filename": "assets/textures/schoolboy.png",
+      "origin": {
+        "x": 0,
+        "y": 48
+      },
+      "dimensions": {
+        "w": 32,
+        "h": 48
+      }
+    },
+    {
+      "entity_id" : 106,
+      "name" : "dennis_left_2",
+      "filename": "assets/textures/schoolboy.png",
+      "origin": {
+        "x": 32,
+        "y": 48
+      },
+      "dimensions": {
+        "w": 32,
+        "h": 48
+      }
+    },
+    {
+      "entity_id" : 107,
+      "name" : "dennis_left_3",
+      "filename": "assets/textures/schoolboy.png",
+      "origin": {
+        "x": 64,
+        "y": 48
+      },
+      "dimensions": {
+        "w": 32,
+        "h": 48
+      }
+    },
+    {
+      "entity_id" : 108,
+      "name" : "dennis_left_4",
+      "filename": "assets/textures/schoolboy.png",
+      "origin": {
+        "x": 96,
+        "y": 48
+      },
+      "dimensions": {
+        "w": 32,
+        "h": 48
+      }
+    },{
+      "entity_id" : 109,
+      "name" : "dennis_right_1",
+      "filename": "assets/textures/schoolboy.png",
+      "origin": {
+        "x": 0,
+        "y": 96
+      },
+      "dimensions": {
+        "w": 32,
+        "h": 48
+      }
+    },
+    {
+      "entity_id" : 110,
+      "name" : "dennis_right_2",
+      "filename": "assets/textures/schoolboy.png",
+      "origin": {
+        "x": 32,
+        "y": 96
+      },
+      "dimensions": {
+        "w": 32,
+        "h": 48
+      }
+    },
+    {
+      "entity_id" : 111,
+      "name" : "dennis_right_3",
+      "filename": "assets/textures/schoolboy.png",
+      "origin": {
+        "x": 64,
+        "y": 96
+      },
+      "dimensions": {
+        "w": 32,
+        "h": 48
+      }
+    },
+    {
+      "entity_id" : 112,
+      "name" : "dennis_right_4",
+      "filename": "assets/textures/schoolboy.png",
+      "origin": {
+        "x": 96,
+        "y": 96
+      },
+      "dimensions": {
+        "w": 32,
+        "h": 48
+      }
+    },
+    {
+      "entity_id" : 113,
+      "name" : "dennis_up_1",
+      "filename": "assets/textures/schoolboy.png",
+      "origin": {
+        "x": 0,
+        "y": 144
+      },
+      "dimensions": {
+        "w": 32,
+        "h": 48
+      }
+    },
+    {
+      "entity_id" : 114,
+      "name" : "dennis_up_2",
+      "filename": "assets/textures/schoolboy.png",
+      "origin": {
+        "x": 32,
+        "y": 144
+      },
+      "dimensions": {
+        "w": 32,
+        "h": 48
+      }
+    },
+    {
+      "entity_id" : 115,
+      "name" : "dennis_up_3",
+      "filename": "assets/textures/schoolboy.png",
+      "origin": {
+        "x": 64,
+        "y": 144
+      },
+      "dimensions": {
+        "w": 32,
+        "h": 48
+      }
+    },
+    {
+      "entity_id" : 116,
+      "name" : "dennis_up_4",
+      "filename": "assets/textures/schoolboy.png",
+      "origin": {
+        "x": 96,
+        "y": 144
+      },
+      "dimensions": {
+        "w": 32,
+        "h": 48
+      }
     }
   ]
 }
