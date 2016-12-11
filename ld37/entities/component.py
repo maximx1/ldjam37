@@ -64,3 +64,9 @@ class SpriteAnimationComponent:
         image_name = entity.sprite_name + "_" + entity.sprite_direction + "_" + entity.sprite_step
 
         entity.image = entity.asset_manager.request_texture(image_name)
+
+class TriggerComponent:
+    def update(self, entity, game_time):
+        for trigger in entity.triggers:
+            if trigger.check(entity, game_time):
+                trigger.activate(entity, game_time)

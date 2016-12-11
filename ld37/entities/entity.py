@@ -1,6 +1,7 @@
 import pygame
 from ld37.common.constants import Colors
 from ld37.entities.component import *
+from ld37.entities.trigger import *
 
 class Entity:
     def __init__(self, entity_id, components):
@@ -11,6 +12,7 @@ class Entity:
         self.is_displayable = False
         self.is_collidable = False
         self.speed = 0
+        self.is_active = True
 
     def setup(self):
         return
@@ -32,7 +34,6 @@ def create_playable_character(entity_id, start_pos, size, starting_image_name):
     e.sprite_direction = sprite_name_components[1]
     e.sprite_step = sprite_name_components[2]
     e.time_since_last_step = 0
-
     return e
 
 def create_static_object(entity_id, start_pos, size, img_name, is_displayable, is_collidable):
@@ -44,6 +45,9 @@ def create_static_object(entity_id, start_pos, size, img_name, is_displayable, i
     e.is_collidable = is_collidable
     return e
 
-def trigger_rect(entity_id, start_pos, size, triggers):
-    e = Entity(entity_id, [])
+def create_trigger(entity_id, start_pos, size, trigger_str, trigger_props):
+    e = Entity(entity_id, [TriggerComponent()])
     e.rect = pygame.rect.Rect(start_pos[0], start_pos[1], size[0], size[1])
+    e.triggers = lookup_trigger_props(trigger_str)
+    e.trigger_props = trigger_props
+    return e
