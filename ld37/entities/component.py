@@ -29,5 +29,27 @@ class ManualCharacterInputComponent:
 class MovementComponent:
     def update(self, entity, game_time):
         delta = game_time / 1000.0 * entity.speed
+        entity.oldrect = pygame.rect.Rect(entity.rect.x, entity.rect.y, entity.rect.w, entity.rect.h)
         entity.rect.x = entity.rect.x + entity.x_direction * delta
         entity.rect.y = entity.rect.y + entity.y_direction * delta
+
+
+class CollisionComponent:
+    def update(self, entity, game_time):
+        for collidable in [x for x in entity.master_entity_list if x.is_collidable and entity.entity_id != x.entity_id]:
+            if entity.rect.colliderect(collidable.rect):
+               self.collide_x(entity, collidable)
+            if entity.rect.colliderect(collidable.rect):
+               self.collide_y(entity, collidable)
+
+    def collide_x(self, entity, collidable):
+        if entity.x_direction > 0 and entity.rect.right > collidable.rect.left and entity.oldrect.right < collidable.rect.left:
+            entity.rect.right = entity.oldrect.right
+        elif entity.x_direction < 0 and entity.rect.left < collidable.rect.right and entity.oldrect.left > collidable.rect.right:
+            entity.rect.left = entity.oldrect.left
+
+    def collide_y(self, entity, collidable):
+        if entity.y_direction > 0 and entity.rect.bottom > collidable.rect.top and entity.oldrect.bottom < collidable.rect.top:
+            entity.rect.bottom = entity.oldrect.bottom
+        elif entity.y_direction < 0 and entity.rect.top < collidable.rect.bottom and entity.oldrect.top > collidable.rect.bottom:
+            entity.rect.top = entity.oldrect.top
