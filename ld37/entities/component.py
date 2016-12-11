@@ -70,7 +70,9 @@ class TextBoxAnimationComponent:
         textbox = pygame.Surface(text_dimension).fill(Colors.BLACK)
         textbox.blit(text_surface, entity.rect)
         entity.time_since_creation += game_time
-        if entity.time_since_creation >= display_time
+        if entity.time_since_creation >= display_time:
+            #TODO Remove entity from entity list
+            entity.displayable = False
         entity.image = textbox
 
 class SpriteAnimationComponent:
