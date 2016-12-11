@@ -1,10 +1,10 @@
 [
   {
-    "entity_id": 1,
+    "entity_id": 9999,
     "type": "playable_character",
     "start_pos": {
-      "x": 100,
-      "y": 100
+      "x": 885,
+      "y": 1250
     },
     "dimension": {
       "w": 32,
@@ -15,26 +15,12 @@
     "starting_image": "dennis_up_1"
   },
   {
-    "entity_id": 2,
-    "type": "obj_st_disp_coll",
-    "start_pos": {
-      "x": 170,
-      "y": 170
-    },
-    "dimension": {
-      "w": 30,
-      "h": 30
-    },
-    "image": [],
-    "starting_image": ""
-  },
-  {
-    "entity_id": 3,
+    "entity_id": 4000,
     "type": "trigger",
     "name": "BGM_2 trigger",
     "start_pos": {
-      "x": 100,
-      "y": 400
+      "x": 885,
+      "y": 1000
     },
     "dimension": {
       "w": 30,
@@ -46,12 +32,29 @@
     }
   },
   {
-    "entity_id": 10,
+    "entity_id": 4001,
+    "type": "trigger",
+    "name": "BGM_1 trigger",
+    "start_pos": {
+      "x": 885,
+      "y": 1250
+    },
+    "dimension": {
+      "w": 50,
+      "h": 50
+    },
+    "triggers": "music",
+    "trigger_props": {
+      "song": "BGM_1"
+    }
+  },
+  {
+    "entity_id": 4002,
     "type": "trigger",
     "name": "Start game trigger",
     "start_pos": {
-      "x": 100,
-      "y": 400
+      "x": 885,
+      "y": 1000
     },
     "dimension": {
       "w": 30,
@@ -61,43 +64,12 @@
     "trigger_props": {}
   },
   {
-    "entity_id": 4,
+    "entity_id": 5000,
     "type": "obj_st_disp_coll",
+    "name": "bomb crate",
     "start_pos": {
-      "x": 240,
-      "y": 170
-    },
-    "dimension": {
-      "w": 30,
-      "h": 30
-    },
-    "image": [],
-    "starting_image": ""
-  },
-  {
-    "entity_id": 5,
-    "type": "trigger",
-    "name": "BGM_1 trigger",
-    "start_pos": {
-      "x": 275,
-      "y": 170
-    },
-    "dimension": {
-      "w": 30,
-      "h": 30
-    },
-    "triggers": "music",
-    "trigger_props": {
-      "song": "BGM_1"
-    }
-  },
-  {
-    "entity_id": 6,
-    "type": "obj_st_disp_coll",
-    "name": "crate",
-    "start_pos": {
-      "x": 310,
-      "y": 170
+      "x": 885,
+      "y": 997
     },
     "dimension": {
       "w": 30,
