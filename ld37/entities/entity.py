@@ -50,10 +50,9 @@ def create_static_object(entity_id, start_pos, size, img_name, is_displayable, i
     e.is_collidable = is_collidable
     return e
 
-def create_text_box(entity_id, start_pos, text, display_time):
+def create_text_box(entity_id, start_pos, min_size, text, display_time):
     e = Entity(entity_id, [])
-    e.pos_x = start_pos[0]
-    e.pos_y = start_pos[1]
+    e.rect = pygame.rect.Rect(start_pos[0], start_pos[1], min_size[0], min_size[1])
     e.speed = 0
     e.is_displayable = True
     e.is_collidable = False
