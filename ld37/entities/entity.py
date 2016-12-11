@@ -22,12 +22,17 @@ class Entity:
             component.update(self, game_time)
 
 def create_playable_character(entity_id, start_pos, size, starting_image_name):
-    e = Entity(entity_id, [ManualCharacterInputComponent(), MovementComponent(), SpriteAnimationComponent()])
+    e = Entity(entity_id, [LinearMovementComponent((0, 1)), MovementComponent(), SpriteAnimationComponent()])
     e.done = False
     e.rect = pygame.rect.Rect(start_pos[0], start_pos[1], size[0], size[1])
     e.speed = 200 #200 pixels/second
+    e.x_direction = 0
+    e.y_direction = 0
     e.is_displayable = True
     e.is_collidable = True
+    e.current_delay_wait = 0
+    e.delay = 500
+    e.is_waiting = True
 
     sprite_name_components = starting_image_name.split("_")
     e.sprite_name = sprite_name_components[0]

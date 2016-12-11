@@ -5,14 +5,17 @@ class DrawComponent:
     def update(entity, game_time):
         pygame.draw.rect()
 
+def detect_endgame(entity):
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            entity.done = True
+        elif event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_ESCAPE:
+                entity.done = True
+
 class ManualCharacterInputComponent:
     def update(self, entity, game_time):
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                entity.done = True
-            elif event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_ESCAPE:
-                    entity.done = True
+        detect_endgame(entity)
 
         keys_pressed = pygame.key.get_pressed()
 
@@ -26,6 +29,19 @@ class ManualCharacterInputComponent:
             entity.y_direction = -1
         if keys_pressed[pygame.K_s]:
             entity.y_direction = 1
+
+class LinearMovementComponent:
+    def __init__(self, direction):
+        self.direction = direction
+
+    def update(self, entity, game_time):
+        detect_endgame(entity)
+        if entity.is_waiting:
+            entity.current_delay_wait = entity.current_delay_wait + game_time
+            if entity.current_delay_wait > entity.delay:
+                entity.is_waiting = False
+        if not entity.is_waiting:
+            (entity.x_direction, entity.y_direction) = self.direction
 
 class MovementComponent:
     def update(self, entity, game_time):
