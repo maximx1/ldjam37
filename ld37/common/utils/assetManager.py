@@ -53,4 +53,4 @@ class AssetManager:
                     AssetManager.asset_dictionary[song_key] = song['filename']
         if AssetManager.asset_dictionary.get(song_key) is not None:
             pygame.mixer.music.load(AssetManager.asset_dictionary[song_key])
-            pygame.mixer.music.play()
+            pygame.mixer.music.play(-1)

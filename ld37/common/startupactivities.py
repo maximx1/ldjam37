@@ -6,7 +6,9 @@ from ld37.common.constants import PLAYER_ID
 
 def create_starting_entities():
     asset_manager = AssetManager()
-    entities = WorldLoader().build_entities()
+    world_loader = WorldLoader()
+    entities = world_loader.build_entities()
+    entities.extend(world_loader.build_world_from_seed())
     get_playable_entity_by_id(PLAYER_ID, entities).is_current_player_controllable = True
 
     for entity in entities:

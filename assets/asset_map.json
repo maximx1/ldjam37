@@ -336,6 +336,19 @@
         "w": 32,
         "h": 48
       }
+    },
+    {
+      "entity_id" : 117,
+      "name" : "floor_001",
+      "filename": "assets/textures/floor_001.jpg",
+      "origin": {
+        "x": 0,
+        "y": 0
+      },
+      "dimensions": {
+        "w": 100,
+        "h": 100
+      }
     }
   ],
   "sound" : [
