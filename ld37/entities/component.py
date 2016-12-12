@@ -1,5 +1,4 @@
 import pygame
-
 from ld37.common.constants import Colors
 from ld37.common.utils.libutils import *
 
@@ -69,7 +68,11 @@ class TextBoxAnimationComponent:
         text_surface = font.render(entity.text, False, Colors.WHITE)
         text_dimension = font.size(entity.text)
         textbox = pygame.Surface(text_dimension).fill(Colors.BLACK)
-        textbox.blit(text_surface, (entity.pos_x, entity.pos_y))
+        textbox.blit(text_surface, entity.rect)
+        entity.time_since_creation += game_time
+        if entity.time_since_creation >= display_time:
+            #TODO Remove entity from entity list
+            entity.displayable = False
         entity.image = textbox
 
 class SpriteAnimationComponent:
