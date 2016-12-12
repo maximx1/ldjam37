@@ -28,7 +28,7 @@ class AssetManager:
                     return AssetManager.asset_dictionary[texture_key]
         else:
             return AssetManager.asset_dictionary.get(texture_key)
-        print "No such texture with name: " + name
+        print("No such texture with name: {}".format(name))
 
     def request_sound(self, name):
         'Get a mixer sound with specified name'
@@ -41,7 +41,7 @@ class AssetManager:
                     return AssetManager.asset_dictionary[sound_key]
         else:
             return AssetManager.asset_dictionary.get(sound_key)
-        print "No such sound with name: " + name
+        print("No such sound with name: {}".format(name))
 
     def load_song(self, name):
         'Loads song with specified name into pygame.mixer.music, does not start playback'
